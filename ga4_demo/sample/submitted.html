@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ6Y6GBT21"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BJ6Y6GBT21');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>送信完了 | GA4 実証サンプル</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        LMN GA4 DEMO <span class="logo-badge">G-BJ6Y6GBT21</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="lp.html" class="nav-link">① LPスクロール</a>
+        <a href="recruit.html" class="nav-link">② 採用フォーム</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container" style="max-width: 600px; margin-top: 80px;">
+    
+    <div style="background-color: var(--color-white); border: 1px solid var(--color-light-gray); border-radius: var(--radius); padding: 50px 40px; box-shadow: var(--shadow); text-align: center;">
+      
+      <div class="success-icon" style="width: 70px; height: 70px; background-color: #ecfdf5; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #10b981; font-size: 2rem; margin: 0 auto 24px auto; border: 1px solid rgba(16, 185, 129, 0.2);">
+        ✓
+      </div>
+
+      <h1 style="font-size: 1.75rem; margin-bottom: 12px;">ご応募ありがとうございました！</h1>
+      
+      <p style="color: var(--color-gray); font-size: 0.95rem; line-height: 1.7; margin-bottom: 36px;">
+        フォームの送信が正常に完了しました。<br>
+        これで、GA4上で <code>form_submit</code> イベントの計測トリガーが正常に検知・処理されたことになります。
+      </p>
+
+      <a href="index.html" class="btn" style="width: 100%;">
+        デモトップに戻る
+      </a>
+
+    </div>
+
+  </main>
+
+</body>
+</html>

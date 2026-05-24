@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA4 Event Triggers Sandbox | HTML & CSS Only</title>
+    <meta name="description" content="JavaScriptを使わず、GA4が検知するピュアなHTML構造を視覚的かつ直感的に体験できるシンプルな検証ページです。">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header>
+            <span class="badge">GA4 Integration Sandbox</span>
+            <h1>GA4標準イベント検知デモ</h1>
+            <p class="subtitle">JavaScriptは不要です。Googleアナリティクス4が自動または標準トリガーとして捕捉する、純粋なHTML構造そのものを体験するシンプルなサンプルです。</p>
+        </header>
+
+        <!-- Cards Container -->
+        <main class="card-section">
+
+            <!-- Card 1: Outbound Link Click -->
+            <section class="card" id="card-click">
+                <div class="card-header">
+                    <h2 class="card-title">1. 外部リンククリック</h2>
+                    <span class="event-name">click</span>
+                </div>
+                <p>
+                    GA4の「測定機能の強化（Enhanced Measurement）」が有効な場合、自分のサイト以外のドメイン（外部リンク）への遷移は、追加のJavaScriptを記述しなくても自動的に <code>click</code> イベントとして収集されます。
+                </p>
+
+                <!-- Code Preview -->
+                <div class="code-block">
+                    &lt;<span class="code-html">a</span> 
+                    <span class="code-attr">href</span>=<span class="code-val">"https://www.google.com"</span> 
+                    <span class="code-attr">target</span>=<span class="code-val">"_blank"</span>&gt;
+                    <span class="code-text">Googleを開く</span>
+                    &lt;/<span class="code-html">a</span>&gt;
+                </div>
+
+                <!-- Interactive Demo Area -->
+                <div class="demo-area">
+                    <h3 class="demo-title">以下の外部リンクをクリックしてテスト:</h3>
+                    <div class="link-list">
+                        
+                        <a href="https://www.google.com" target="_blank" class="btn-outbound" id="outbound-google">
+                            Googleを開く
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        </a>
+
+                        <a href="https://github.com" target="_blank" class="btn-outbound" id="outbound-github">
+                            GitHubを開く
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card 2: Form Submission -->
+            <section class="card" id="card-form">
+                <div class="card-header">
+                    <h2 class="card-title">2. フォーム送信完了</h2>
+                    <span class="event-name">form_submit</span>
+                </div>
+                <p>
+                    ユーザーがフォームの送信ボタンを押して送信が完了すると、GA4は自動的に <code>form_submit</code> イベントを発生させます。ポイントは、フォームが標準的な <code>&lt;form&gt;</code> タグで囲まれ、<code>type="submit"</code> のボタンで送信（完了ページへ遷移）される純粋なHTML構造であることです。
+                </p>
+
+                <!-- Code Preview -->
+                <div class="code-block">
+                    &lt;<span class="code-html">form</span> <span class="code-attr">action</span>=<span class="code-val">"submitted.html"</span>&gt;<br>
+                    &nbsp;&nbsp;&lt;<span class="code-html">input</span> <span class="code-attr">type</span>=<span class="code-val">"text"</span> <span class="code-attr">required</span>&gt;<br>
+                    &nbsp;&nbsp;&lt;<span class="code-html">button</span> <span class="code-attr">type</span>=<span class="code-val">"submit"</span>&gt;<span class="code-text">送信</span>&lt;/<span class="code-html">button</span>&gt;<br>
+                    &lt;/<span class="code-html">form</span>&gt;
+                </div>
+
+                <!-- Interactive Demo Area -->
+                <div class="demo-area">
+                    <h3 class="demo-title">フォームを入力して送信（実際に完了画面に遷移します）:</h3>
+                    
+                    <form action="submitted.html" method="GET" id="demo-contact-form">
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="user-name">お名前 (必須)</label>
+                            <input type="text" id="user-name" name="name" class="form-control" placeholder="山田 太郎" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="user-email">メールアドレス (必須)</label>
+                            <input type="email" id="user-email" name="email" class="form-control" placeholder="taro@example.com" required>
+                        </div>
+
+                        <button type="submit" class="btn-submit" id="form-submit-trigger">
+                            フォームを送信する
+                        </button>
+
+                    </form>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Information banner -->
+        <div class="info-banner">
+            <h4>💡 豆知識：GA4での計測のしくみ</h4>
+            <p>
+                GA4の計測タグ（Googleタグ）が裏で読み込まれている場合、タグはブラウザ上のDOMイベントを監視します。「リンククリック」や「フォーム送信（submitイベント）」が発生すると、そのHTML要素の属性（<code>href</code> や <code>id</code>, <code>class</code>）を解析し、自動的にGoogleのサーバーにデータ（イベント）を転送します。開発者が特別なJavaScriptコードを書かなくても、この標準的なHTML構造さえ作れば自動で正しく解析してくれます。
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

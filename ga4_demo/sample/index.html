@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ6Y6GBT21"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BJ6Y6GBT21');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GA4 実証サンプル集 | CodaAcademy</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        LMN GA4 DEMO <span class="logo-badge">G-BJ6Y6GBT21</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="lp.html" class="nav-link">① LPスクロール</a>
+        <a href="recruit.html" class="nav-link">② 採用フォーム</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>GA4 <span>標準イベント計測</span> 実証サンプル</h1>
+        <p>
+          Google Analytics 4 が追加のJavaScriptなしで検知する、「スクロール(scroll)」、「離脱クリック(click)」、「フォーム送信(form_submit)」のHTML設計パターンを体験できるサンプルです。
+        </p>
+      </div>
+    </section>
+
+    <!-- Demo Cards Grid -->
+    <section class="container">
+      <div class="demo-grid">
+        
+        <!-- Card 1: LP & Scroll -->
+        <article class="demo-card">
+          <div class="card-top">
+            <span class="event-tag">scroll (90%到達)</span>
+            <span class="event-tag">click (離脱)</span>
+            <h3>① LPサイトでの行動計測</h3>
+            <p>
+              縦長のLP（ランディングページ）を最後までスクロール（読了率の計測）し、最下部にある別サイトの購入ボタンをクリックする「理想的なユーザー動線」を再現。GA4の自動イベントが発動します。
+            </p>
+          </div>
+          <a href="lp.html" class="btn">LPデモページを見る ➔</a>
+        </article>
+
+        <!-- Card 2: Recruit & Form Submit -->
+        <article class="demo-card">
+          <div class="card-top">
+            <span class="event-tag">form_submit</span>
+            <h3>② 採用サイトの応募フォーム</h3>
+            <p>
+              応募完了やお問い合わせ時にGA4が自動検知する、標準的なフォーム構造を再現。送信完了後のサンクスページ遷移をもって計測が完了する動作を検証します。
+            </p>
+          </div>
+          <a href="recruit.html" class="btn" style="background-color: var(--color-dark);">フォームデモを見る ➔</a>
+        </article>
+
+      </div>
+
+      <div class="info-banner">
+        <h4>💡 このサンプルの計測確認方法</h4>
+        <p>
+          各ページにはGA4（G-BJ6Y6GBT21）のタグが挿入されています。ブラウザのデベロッパーツール（F12）の「ネットワーク」タブで <code>collect?v=2</code> とフィルタリングするか、Googleタグマネージャーの「プレビューモード（Tag Assistant）」を使用すると、実際にイベントが飛んでいる様子を確認できます。
+        </p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
