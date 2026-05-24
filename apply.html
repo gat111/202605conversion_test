@@ -23,15 +23,7 @@
       </nav>
     </div>
   </header>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ6Y6GBT21"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-BJ6Y6GBT21');
-</script>
   <!-- Main Section -->
   <main style="padding-top: calc(var(--header-height) + 40px); background: #f8fafc; min-height: 85vh;">
     <section class="section">
@@ -113,18 +105,10 @@
                 </label>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 16px;" id="submit-btn">
+              <a href="apply_success.html" class="btn btn-primary" style="width: 100%; margin-top: 16px; text-decoration: none;" id="submit-btn">
                 申し込む ➔
-              </button>
+              </a>
             </form>
-
-            <!-- Success Message Container -->
-            <div class="success-msg" id="successMessage">
-              <div class="success-icon">✓</div>
-              <h3 class="success-title">お申し込みが完了しました！</h3>
-              <p class="success-text">ご入力いただいたメールアドレス宛に、担当者より24時間以内にご連絡させていただきます。今しばらくお待ちください。</p>
-              <a href="index.html" class="btn btn-outline" style="width: 100%;" id="success-back-btn">ホームに戻る</a>
-            </div>
           </div>
         </div>
 
@@ -163,36 +147,6 @@
       } else {
         header.classList.remove('header-active');
       }
-    });
-
-    // Form submission mock
-    const form = document.getElementById('applyForm');
-    const successMsg = document.getElementById('successMessage');
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      // Basic validation
-      const name = document.getElementById('userName').value.trim();
-      const email = document.getElementById('userEmail').value.trim();
-      const course = document.getElementById('userCourse').value;
-      const agree = document.getElementById('agreeCheck').checked;
-
-      if (!name || !email || !course || !agree) {
-        alert('必須項目をすべて入力し、プライバシーポリシーへの同意を行ってください。');
-        return;
-      }
-
-      // Simple email validation regex
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert('正しいメールアドレスの形式で入力してください。');
-        return;
-      }
-
-      // On successful submission, hide the form and show success message
-      form.style.display = 'none';
-      successMsg.style.display = 'block';
     });
   </script>
 </body>
