@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>無料体験申し込み | CodaAcademy</title>
+  <meta name="description" content="CodaAcademyの無料体験レッスン・カウンセリングの申し込みページです。最短1分で入力が完了します。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <div class="logo-icon">&lt;&gt;</div>
+        CodaAcademy
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link" id="nav-home">ホーム</a>
+        <a href="curriculum.html" class="nav-link" id="nav-curriculum">カリキュラム</a>
+        <a href="apply.html" class="btn btn-primary" id="nav-apply">無料体験に申し込む</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main style="padding-top: calc(var(--header-height) + 40px); background: #f8fafc; min-height: 85vh;">
+    <section class="section">
+      <div class="container">
+        
+        <div class="apply-layout">
+          <!-- Left info pane -->
+          <div class="apply-info" id="apply-info-section">
+            <div class="apply-info-top">
+              <h2>始める一歩を、<br>ここから。</h2>
+              <p>無料体験・カウンセリングへのお申し込みありがとうございます。以下のフォームより必要事項をご入力の上、送信してください。</p>
+              
+              <div class="info-list">
+                <div class="info-item">
+                  <div class="info-icon">📍</div>
+                  <div class="info-text">
+                    <h4>教室所在地</h4>
+                    <p>東京都渋谷区道玄坂 1-2-3 渋谷テックビル 4F</p>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon">✉️</div>
+                  <div class="info-text">
+                    <h4>お問い合わせメール</h4>
+                    <p>support@codaacademy.example.com</p>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon">📞</div>
+                  <div class="info-text">
+                    <h4>お電話（受付 10:00〜19:00）</h4>
+                    <p>03-1234-5678</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="apply-info-footer">
+              <p>※オンラインでの受講・体験も可能です。ご希望の場合は、フォームの備考欄にご記入ください。</p>
+            </div>
+          </div>
+
+          <!-- Right form pane -->
+          <div class="apply-form-wrap">
+            <!-- Normal Form -->
+            <form id="applyForm" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="userName">お名前<span>*</span></label>
+                <input type="text" id="userName" class="form-control" placeholder="山田 太郎" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="userEmail">メールアドレス<span>*</span></label>
+                <input type="email" id="userEmail" class="form-control" placeholder="taro.yamada@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="userCourse">ご希望のコース<span>*</span></label>
+                <select id="userCourse" class="form-control" style="appearance: none; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2364748b%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><polyline points=%226 9 12 15 18 9%22></polyline></svg>'); background-repeat: no-repeat; background-position: right 16px center;" required>
+                  <option value="" disabled selected>選択してください</option>
+                  <option value="web">Webアプリケーション開発コース</option>
+                  <option value="ai">Python・AI開発基礎コース</option>
+                  <option value="junior">キッズ＆ジュニアコース</option>
+                  <option value="other">まだ決めていない / 相談して決めたい</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="userMessage">ご質問・ご要望</label>
+                <textarea id="userMessage" class="form-control" placeholder="体験授業の希望日時や、事前に質問したい内容があればご記入ください。"></textarea>
+              </div>
+
+              <div class="form-group" style="margin-top: 32px;">
+                <label class="checkbox-label" for="agreeCheck">
+                  <input type="checkbox" id="agreeCheck" required>
+                  <span>プライバシーポリシーに同意する</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 16px;" id="submit-btn">
+                申し込む ➔
+              </button>
+            </form>
+
+            <!-- Success Message Container -->
+            <div class="success-msg" id="successMessage">
+              <div class="success-icon">✓</div>
+              <h3 class="success-title">お申し込みが完了しました！</h3>
+              <p class="success-text">ご入力いただいたメールアドレス宛に、担当者より24時間以内にご連絡させていただきます。今しばらくお待ちください。</p>
+              <a href="index.html" class="btn btn-outline" style="width: 100%;" id="success-back-btn">ホームに戻る</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3 id="footer-logo">&lt;&gt; CodaAcademy</h3>
+        <p>未来のクリエイターを育てるプログラミングスクール。本気で学び、自走力を身につける場所。</p>
+      </div>
+      <div class="footer-nav">
+        <span class="footer-nav-title">Menu</span>
+        <div class="footer-menu">
+          <a href="index.html" class="footer-link" id="footer-link-home">ホーム</a>
+          <a href="curriculum.html" class="footer-link" id="footer-link-curriculum">カリキュラム</a>
+          <a href="apply.html" class="footer-link" id="footer-link-apply">無料体験に申し込む</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 CodaAcademy. All rights reserved.</p>
+      <p>Designed with ❤️ for future creators.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header background change on scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('header-active');
+      } else {
+        header.classList.remove('header-active');
+      }
+    });
+
+    // Form submission mock
+    const form = document.getElementById('applyForm');
+    const successMsg = document.getElementById('successMessage');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Basic validation
+      const name = document.getElementById('userName').value.trim();
+      const email = document.getElementById('userEmail').value.trim();
+      const course = document.getElementById('userCourse').value;
+      const agree = document.getElementById('agreeCheck').checked;
+
+      if (!name || !email || !course || !agree) {
+        alert('必須項目をすべて入力し、プライバシーポリシーへの同意を行ってください。');
+        return;
+      }
+
+      // Simple email validation regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('正しいメールアドレスの形式で入力してください。');
+        return;
+      }
+
+      // On successful submission, hide the form and show success message
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

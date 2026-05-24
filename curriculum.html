@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カリキュラム一覧 | CodaAcademy</title>
+  <meta name="description" content="初心者からプロを目指す方まで、レベルや目的に合わせた最適なプログラミング学習カリキュラムをご紹介します。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <div class="logo-icon">&lt;&gt;</div>
+        CodaAcademy
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link" id="nav-home">ホーム</a>
+        <a href="curriculum.html" class="nav-link active" id="nav-curriculum">カリキュラム</a>
+        <a href="apply.html" class="btn btn-primary" id="nav-apply">無料体験に申し込む</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main style="padding-top: calc(var(--header-height) + 40px); background: #fdfdfd;">
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title" id="curriculum-main-title">目的別で選べる3つのカリキュラム</h1>
+        <p class="section-subtitle" id="curriculum-sub-desc">初心者から将来のエンジニアを目指す方まで、自分のペースで着実にステップアップできるコースを用意しています。</p>
+
+        <!-- Curriculum Cards Grid -->
+        <div class="curriculum-grid">
+          <!-- Card 1 -->
+          <div class="curriculum-card" id="course-web">
+            <div class="curriculum-img-wrap" style="background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);">
+              <span class="curriculum-badge">一番人気</span>
+              <div class="curriculum-icon-large">🌐</div>
+            </div>
+            <div class="curriculum-body">
+              <h3 class="curriculum-card-title">Webアプリケーション開発コース</h3>
+              <p class="curriculum-card-desc">HTML/CSSから始まり、現代のフロントエンド開発の主流であるJavaScript、Reactを徹底的に学びます。最終的には自分だけのWebサービスをインターネット上に公開します。</p>
+              <div class="curriculum-meta">
+                <span>期間: <strong>3ヶ月</strong></span>
+                <span class="curriculum-price">月額 ¥29,800</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="curriculum-card" id="course-ai">
+            <div class="curriculum-img-wrap" style="background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);">
+              <span class="curriculum-badge">初心者歓迎</span>
+              <div class="curriculum-icon-large">🤖</div>
+            </div>
+            <div class="curriculum-body">
+              <h3 class="curriculum-card-title">Python・AI開発基礎コース</h3>
+              <p class="curriculum-card-desc">人気急上昇のプログラミング言語「Python」を使って、データの収集・分析や機械学習の基礎を学びます。データを扱う面白さを実感しながら、AI時代の基礎力を身につけます。</p>
+              <div class="curriculum-meta">
+                <span>期間: <strong>4ヶ月</strong></span>
+                <span class="curriculum-price">月額 ¥34,800</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="curriculum-card" id="course-junior">
+            <div class="curriculum-img-wrap" style="background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);">
+              <span class="curriculum-badge">小中学生向け</span>
+              <div class="curriculum-icon-large">🎮</div>
+            </div>
+            <div class="curriculum-body">
+              <h3 class="curriculum-card-title">キッズ＆ジュニアコース</h3>
+              <p class="curriculum-card-desc">Scratchでのビジュアルプログラミングから始まり、ゲーム開発を通じて論理的思考力や問題解決能力を楽しく育みます。希望者はHTMLでのマイホームページ作りにも挑戦します。</p>
+              <div class="curriculum-meta">
+                <span>期間: <strong>継続制</strong></span>
+                <span class="curriculum-price">月額 ¥14,800</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner" id="curriculum-cta">
+          <h2 class="cta-title">まずは無料体験授業に参加してみませんか？</h2>
+          <p class="cta-desc">「自分に向いているコースがわからない」「実際の教室の雰囲気を見てみたい」など、どんな疑問でもプロのメンターが丁寧にお答えします。</p>
+          <div class="cta-btn-wrap">
+            <a href="apply.html" class="btn btn-primary" style="background: var(--color-white); color: var(--color-primary); box-shadow: 0 10px 20px -3px rgba(255, 255, 255, 0.2);" id="curriculum-cta-btn">
+              無料で体験授業に申し込む ➔
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3 id="footer-logo">&lt;&gt; CodaAcademy</h3>
+        <p>未来のクリエイターを育てるプログラミングスクール。本気で学び、自走力を身につける場所。</p>
+      </div>
+      <div class="footer-nav">
+        <span class="footer-nav-title">Menu</span>
+        <div class="footer-menu">
+          <a href="index.html" class="footer-link" id="footer-link-home">ホーム</a>
+          <a href="curriculum.html" class="footer-link" id="footer-link-curriculum">カリキュラム</a>
+          <a href="apply.html" class="footer-link" id="footer-link-apply">無料体験に申し込む</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 CodaAcademy. All rights reserved.</p>
+      <p>Designed with ❤️ for future creators.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header background change on scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('header-active');
+      } else {
+        header.classList.remove('header-active');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodaAcademy | 未来を創るプログラミングスクール</title>
+  <meta name="description" content="現役エンジニアによる個別指導、実践的なカリキュラムで一生モノのスキルを身に付けよう。無料体験申し込み受付中！">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <div class="logo-icon">&lt;&gt;</div>
+        CodaAcademy
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active" id="nav-home">ホーム</a>
+        <a href="curriculum.html" class="nav-link" id="nav-curriculum">カリキュラム</a>
+        <a href="apply.html" class="btn btn-primary" id="nav-apply">無料体験に申し込む</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section (FirstView) -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>NEW</span> 夏期生 早期割引受付中
+        </div>
+        <h1 class="hero-title" id="hero-main-title">
+          未来を創る、<br>
+          <span>コードを書こう。</span>
+        </h1>
+        <p class="hero-description" id="hero-sub-desc">
+          CodaAcademyは、実践力を重視した次世代のプログラミングスクールです。プロの現役開発者による個別フィードバックで、確実なスキルアップを約束します。
+        </p>
+        <div class="hero-actions">
+          <a href="apply.html" class="btn btn-primary" id="hero-cta-apply">無料で相談してみる</a>
+          <a href="curriculum.html" class="btn btn-outline" id="hero-cta-curriculum">カリキュラムを見る</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-circle"></div>
+        <div class="hero-card">
+          <div class="code-mockup" id="code-window">
+            <p class="code-comment">// 未来のあなたへのコード</p>
+            <p><span class="code-keyword">const</span> <span class="code-function">academy</span> = <span class="code-keyword">new</span> <span class="code-function">CodaAcademy</span>({</p>
+            <p>&nbsp;&nbsp;student: <span class="code-string">"あなた"</span>,</p>
+            <p>&nbsp;&nbsp;goals: [<span class="code-string">"Webアプリ開発"</span>, <span class="code-string">"AIエンジニア"</span>],</p>
+            <p>&nbsp;&nbsp;duration: <span class="code-string">"3ヶ月〜"</span>,</p>
+            <p>&nbsp;&nbsp;mentorship: <span class="code-keyword">true</span></p>
+            <p>});</p>
+            <br>
+            <p><span class="code-keyword">await</span> <span class="code-function">academy</span>.<span class="code-function">unlockPotential</span>();</p>
+            <p><span class="code-keyword">console</span>.<span class="code-function">log</span>(<span class="code-string">"Hello, Creative World!"</span>);</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="section-title" id="features-title">CodaAcademyが選ばれる3つの理由</h2>
+      <p class="section-subtitle" id="features-subtitle">他にはない圧倒的に実践的なカリキュラムと確実なサポートで、目標達成を後押しします。</p>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card" id="feature-1">
+          <div class="feature-icon">👨‍💻</div>
+          <h3 class="feature-title">現役エンジニアによる徹底指導</h3>
+          <p class="feature-desc">第一線で活躍するプロのエンジニアがメンターとなり、コードレビューから技術的な疑問の解決までをマンツーマンに近い形でサポートします。</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card" id="feature-2">
+          <div class="feature-icon">🚀</div>
+          <h3 class="feature-title">オリジナルポートフォリオの開発</h3>
+          <p class="feature-desc">ただ教材をなぞるだけでなく、自分でアイデアを出し、設計・開発・デプロイまでを行う「一生誇れるプロダクト」を作り上げます。</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card" id="feature-3">
+          <div class="feature-icon">🤝</div>
+          <h3 class="feature-title">就職・キャリア支援も完備</h3>
+          <p class="feature-desc">専任のキャリアアドバイザーが提携企業とのマッチング、履歴書レビュー、模擬面接などを提供し、あなたの新しい一歩を力強く支援します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3 id="footer-logo">&lt;&gt; CodaAcademy</h3>
+        <p>未来のクリエイターを育てるプログラミングスクール。本気で学び、自走力を身につける場所。</p>
+      </div>
+      <div class="footer-nav">
+        <span class="footer-nav-title">Menu</span>
+        <div class="footer-menu">
+          <a href="index.html" class="footer-link" id="footer-link-home">ホーム</a>
+          <a href="curriculum.html" class="footer-link" id="footer-link-curriculum">カリキュラム</a>
+          <a href="apply.html" class="footer-link" id="footer-link-apply">無料体験に申し込む</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 CodaAcademy. All rights reserved.</p>
+      <p>Designed with ❤️ for future creators.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Header background change on scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('header-active');
+      } else {
+        header.classList.remove('header-active');
+      }
+    });
+  </script>
+</body>
+</html>
